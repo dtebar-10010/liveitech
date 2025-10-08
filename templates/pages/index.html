@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Home - LIVEiTECH{% endblock %}
+
+{% block content %}
+ {% include 'components/beatlesmenu.html' %}
+ {% include 'components/hero.html' %}
+
+ {% include 'components/floatbutton.html' %}
+ {% include 'components/carousel.html' %}
+ {% include 'sections/about.html' %}
+ {% include 'sections/portfolio.html' %}
+ {% include 'sections/services.html' %}
+ {% include 'sections/partners.html' %}
+ {% include 'sections/examples.html' %}
+ {# {% include 'sections/theteam.html' %} #}
+ {# {% include 'sections/testimonials.html' %} #}
+ {# {% include 'sections/blog.html' %} #}
+ {% include 'pages/contactus.html' %}
+ {% include 'sections/footer.html' %}
+{% endblock %}

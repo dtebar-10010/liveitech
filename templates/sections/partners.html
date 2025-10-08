@@ -1,0 +1,49 @@
+{% load static %}
+{% load strip_paragraphs %}
+
+{% if partners_header %}
+<section id = "partners" class = "service colorsbg">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "main_service_area">
+          <div class = "head_title m-y-3 p-t-3 wow fadeInUp">
+            <div class = "row">
+              <div class = "col-md-12">
+                <h3>{{ partners_header.title }}</h3>
+
+              </div>
+              <div class = "col-md-12">
+                <h6>{{ partners_header.subtitle|strip_outer_p|safe }}</h6>
+                <br>
+                {{ partners_header.description|safe }}
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if partners %}
+  <div class = "container">
+    {% for partner in partners %}
+    {% if forloop.counter0|divisibleby:3 %}
+    <div class = "row">
+    {% endif %}
+      <div class = "col-md-4">
+        <div class = "single_blog m-t-2">
+          <div class = "single_blog_img">
+            <img src = "{{ partner.logo.url }}" alt = "{{ partner.name }}">
+          </div>
+        </div>
+      </div>
+    {% if forloop.counter|divisibleby:3 or forloop.last %}
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+<br>
+{% endif %}

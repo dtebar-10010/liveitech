@@ -1,0 +1,204 @@
+{% load static %}
+{% load strip_paragraphs %}
+
+{% if services_header %}
+<section id = "service" class = "service colorsbg">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "main_service_area">
+          <div class = "head_title m-y-3 p-t-3 wow fadeInUp">
+            <div class = "row">
+              <div class = "col-md-12">
+                <h3>{{ services_header.title }}</h3>
+              </div>
+              <div class = "col-md-12">
+                <h6>{{ services_header.subtitle|strip_outer_p|safe }}</h6>
+                <br>
+                {{ services_header.description|safe }}
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class = "single_service_area m-t-3 p-t-2">
+
+            {% for service in services %}
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "{{ service.anchor_id }}" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    {% if service.image %}
+                    <img src = "{{ service.image.url }}" alt = "{{ service.title }}">
+                    {% endif %}
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">{{ service.title }}</h6>
+                    <div style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      {{ service.description|safe }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            {% endfor %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+{% else %}
+<section id = "service" class = "service colorsbg">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "main_service_area">
+          <div class = "head_title m-y-3 p-t-3 wow fadeInUp">
+            <div class = "row">
+              <div class = "col-md-12">
+                <h3>Our Services</h3>
+              </div>
+              <br>
+              <div class = "col-md-12">
+                <h6>
+                  Our family of consultants and systems engineers are equipped with the knowledge to design the perfect system to
+                  address all of your security, network and low voltage needs. From surveillance to audio, our team of technicians
+                  can install any system for both, residential and commercial applications.
+                </h6>
+                <p>Our installers have the knowledge and support to do the job right, the first time. Check out what LIVE i TECH has to offer
+                  --below, and schedule your free assessment today!</p><br>
+              </div>
+            </div>
+          </div>
+          <br>
+
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "cctv" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/PTZ_ArmBracketMount.jpg' %}" alt = "CCTV PTZ Camera System">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">CCTV</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      LIVE i TECH has worked with many of the leading CCTV manufacturers to consistently stay informed on new systems.
+                      Whether you have a home, business, or municipality, our team is equipped to handle projects of any size.
+                      Our systems are modular and therefore can be scaled for future growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "card" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/CardPresentedtoKeypad.jpg' %}" alt = "Access Control Card Reader System">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">Access Control</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      Our access control or "keyless entry" systems assist our clients by providing restricted access to certain areas
+                      of their home, or business. Whether it's a keypad to restrict entry, or a dozen biometric readers logging
+                      traffic in and out of multiple areas, we have the knowledge and expertise to get you exactly what you need.
+                      We have multiple systems to choose from; these systems are available for many different budgets, and needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "iot" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/CityWideNetwork.jpg' %}" alt = "IoT LAN WAN Network Infrastructure">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">IOT LAN & WAN</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      The Internet of Things is growing as every year more devices are connected to the internet.
+                      What used to be only a computer hardwired with an ethernet cable, is now a network of interconnected devices.
+                      Since our family realized this change, we have been continuously educating ourselves
+                      on the latest networked systems so that we may offer you the latest in VOIP, RFID Asset Tracking, etc.
+                      We have the capabilities to install your physical network infrastructure, or your private wireless area network.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "intercom" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/Intercom.jpg' %}" alt = "Intercom and PA System">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">Intercom & PA</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      Did you hear? LIVE i TECH can help you with all of your audio needs as well. Our commercial installers can assist you
+                      in setting up your intercom and/or public address systems; high-quality sound, and quality installations to address your specific needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "design" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/SystemDesign.jpg' %}" alt = "System Design and Engineering">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">System Design</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      Our consultants are provided with consistent access to education and training so that they may design the system that meets your needs.
+                      LIVE i TECH maintains strong relationships with local municipalities to get your projects completed in a timely manner.
+                      Our team has designed customized systems for multiple applications in many different industries.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class = "single_service_area m-t-3 p-t-2">
+              <div id = "software" class = "row">
+                <div class = "col-md-6">
+                  <div class = "single_service_left text-sm-center wow fadeInleft">
+                    <img src = "{% static 'images/services/AccessControl/software.jpg' %}" alt = "Software Development Services">
+                  </div>
+                </div>
+                <div class = "col-md-6">
+                  <div class = "single_service p-r-1 wow fadeInUp">
+                    <h6 class = "m-b-2" style = "margin-left:-55px !important; margin-top:3px !important;">Software Development/Consulting</h6>
+                    <p style = "margin-left:-55px !important; padding-left:0 !important; padding-right:11px;">
+                      LIVE i TECH has added an experienced software development team.
+                      We now offer custom web sites and full-fledged eCommerce web applications!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+{% endif %}

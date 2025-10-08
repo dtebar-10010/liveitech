@@ -1,0 +1,54 @@
+{% load static %}
+
+<div class = "float-container" id = "floatButton">
+    <a href = "javascript:void(0)"
+       onclick = "document.getElementById('contactus').scrollIntoView({behavior: 'smooth'})"
+       class = "float my-float">
+      <!--<i class="fa fa-comments"></i>-->
+        <img src = "{% static 'images/icons/favicon.png' %}"
+             alt = "Contact Us"
+             style = "border:none !important;">
+    </a>
+    <div class = "float-phone">
+        (954) 445-0712
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+ const floatButton = document.getElementById('floatButton');
+ const heroSection = document.querySelector('.hero-section');
+ const carouselSection = document.querySelector('.owl-carousel'); // Adjust selector based on your carousel's class
+
+ function toggleFloatButton() {
+  const scrollTop = window.scrollY;
+
+  // Get the bottom position of hero section
+  const heroBottom = heroSection ? heroSection.offsetTop + heroSection.offsetHeight : 0;
+
+  // Get the bottom position of carousel section
+  let carouselBottom = 0;
+  if (carouselSection) {
+   carouselBottom = carouselSection.offsetTop + carouselSection.offsetHeight;
+  }
+
+  // Show button only when scrolled past both hero and carousel sections
+  const threshold = Math.max(heroBottom, carouselBottom);
+
+  if (scrollTop > threshold) {
+   floatButton.style.display = 'block';
+  } else {
+   floatButton.style.display = 'none';
+  }
+ }
+
+ // Initially hide the button
+ floatButton.style.display = 'none';
+
+ // Listen for scroll events
+ window.addEventListener('scroll', toggleFloatButton);
+
+ // Also check on resize in case layout changes
+ window.addEventListener('resize', toggleFloatButton);
+});
+</script>

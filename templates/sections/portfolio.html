@@ -1,0 +1,54 @@
+{% load static %}
+{% load strip_paragraphs %}
+
+{% if portfolio %}
+<section id = "portfolio" class = "portfolio">
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "main_portfolio_area">
+          <div class = "head_title m-y-3 p-y-3 wow fadeInUp">
+            <div class = "row">
+              <div class = "col-md-12">
+                <h3>{{ portfolio.title }}</h3>
+
+              </div>
+              <div class = "col-md-12">
+                <h6>{{ portfolio.subtitle|strip_outer_p|safe }}</h6>
+                <br>
+                {{ portfolio.description|safe }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class = "row">
+      {% if portfolio.image_1 %}
+      <div class = "col-md-6" style = "margin-top:11px;">
+        <img src = "{{ portfolio.image_1.url }}" alt = "{{ portfolio.image_1_alt }}">
+      </div>
+      {% endif %}
+      {% if portfolio.image_2 %}
+      <div class = "col-md-6" style = "margin-top:11px;">
+        <img src = "{{ portfolio.image_2.url }}" alt = "{{ portfolio.image_2_alt }}">
+      </div>
+      {% endif %}
+    </div>
+    <div class = "row">
+      {% if portfolio.image_3 %}
+      <div class = "col-md-6" style = "margin-top:11px;">
+        <img src = "{{ portfolio.image_3.url }}" alt = "{{ portfolio.image_3_alt }}">
+      </div>
+      {% endif %}
+      {% if portfolio.image_4 %}
+      <div class = "col-md-6" style = "margin-top:11px;">
+        <img src = "{{ portfolio.image_4.url }}" alt = "{{ portfolio.image_4_alt }}">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+<br>
+{% endif %}

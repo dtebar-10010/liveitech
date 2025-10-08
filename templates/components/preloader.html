@@ -1,0 +1,74 @@
+{% load static %}
+<html style="border:none !important; background-color:black !important;">
+  <head>
+    {% include 'base/base.html' %}
+  </head>
+  <body style="border:none !important; background-color:black !important;">
+    <div class="">
+      <section id="preloader">
+        <div class="col-md-12">
+          <div class="loader">
+            <div class="finger finger-1">
+              <div class="finger-item">
+                <span></span><i></i>
+              </div>
+            </div>
+            <div class="finger finger-2">
+              <div class="finger-item">
+                <span></span><i></i>
+              </div>
+            </div>
+            <div class="finger finger-3">
+              <div class="finger-item">
+                <span></span><i></i>
+              </div>
+            </div>
+            <div class="finger finger-4">
+              <div class="finger-item">
+                <span></span><i></i>
+              </div>
+            </div>
+            <div class="last-finger">
+              <div class="last-finger-item"><i></i></div>
+            </div>
+          </div>
+        </div>
+        <script>
+          setTimeout(function () {
+            window.location.href = 'home.php';
+          }, 9000);
+        </script>
+      </section>
+    </div></br>
+    <div class="row">
+      <div class="container" style="text-align: center !important;">
+        <div class="col-md-4 col-md-push-4 wow fadeInLeft">
+          <p><img src="{% static \'images/logos/logo-small-light.png\' %}" alt="" style="border:none; max-width:33%;"></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="" style="text-align: center !important;">
+        <div class="col-md-12 wow fadeInLeft">
+          <h6 class="m-b-2"style="font-size:77%;">
+            Technology grows at an expontential rate; it's integrated into myriad applications to improve our world.
+          </h6>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="" style="text-align: center !important;">
+        <div class="col-md-12 wow fadeInTop">
+          <p><img src="{% static \'images/background/IOT-light.jpg\' %}" alt="" style="max-width:100%;"</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="container" style="text-align: center !important;">
+        <div class="col-md-3 col-md-push-5 wow fadeInTop">
+          <p><img src="{% static \'images/etc/loader.gif\' %}" alt="" style="max-width:54%;"</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

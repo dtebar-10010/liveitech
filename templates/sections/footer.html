@@ -1,0 +1,178 @@
+{% load static %}
+
+{% if footer %}
+<div style = "margin-top: 9px; margin-bottom: 11px" class = "row" >
+ <div class = "main_footer" >
+  <div class = "footer_logo text-center mb-2" >
+   <a href = "#" ><img src = "{{ footer.logo_image.url }}"
+                       alt = "LIVEiTECH Logo"
+                       style = "width:27% !important;
+                 padding-bottom: 19px !important;
+                 padding-left: 9px !important;
+                 padding-right: 9px !important;" ></a >
+   <br >
+
+   {% if footer.facebook_url %}
+   <a href = "{{ footer.facebook_url }}" target = "_blank" >
+    <i class = "fa-brands fa-facebook" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+   {% endif %}
+
+   {% if footer.twitter_url %}
+   <a href = "{{ footer.twitter_url }}" target = "_blank" >
+    <i class = "fa-brands fa-x-twitter" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+   {% endif %}
+
+   {% if footer.instagram_url %}
+   <a href = "{{ footer.instagram_url }}" target = "_blank" >
+    <i class = "fa-brands fa-instagram" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+   {% endif %}
+
+   {% if footer.youtube_url %}
+   <a href = "{{ footer.youtube_url }}" target = "_blank" >
+    <i class = "fa-brands fa-youtube" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+   {% endif %}
+
+   <br><br>   <br><br>
+
+   <div class = "col-lg-12 copyright_text text-left text-sm-left" >
+    <div class = "wow fadeInRight animated" data-wow-duration = "2s" style = "font-size:18px" >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >{{ footer.copyright_text }}</a >
+     <br >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >{{ footer.phone }}</a >
+     <br >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >{{ footer.location }}</a >
+     <br ><br >
+     {% if footer.developer_url %}
+     <a style = "color:green !important; font-size:14px; margin-left:9px;" href = "{{ footer.developer_url }}" target = "_blank" >
+      {{ footer.developer_text }}
+     </a >
+     {% endif %}
+     <div class = "row" >
+      <br >
+     </div >
+    </div >
+   </div >
+  </div >
+ </div >
+</div >
+{% else %}
+<div style = "margin-top: 9px; margin-bottom: 11px" class = "row" >
+ <div class = "main_footer" >
+  <div class = "footer_logo text-center mb-2" >
+   <a href = "#" ><img src = "{% static 'images/logos/logo-small-light.png' %}"
+                       alt = "LIVEiTECH Logo"
+                       style = "width:27% !important;
+                 padding-bottom: 19px !important;
+                 padding-left: 9px !important;
+                 padding-right: 9px !important;" ></a >
+   <br >
+
+   <a href = "https://www.facebook.com/LIVEiTECHINC/" target = "_blank" >
+    <i class = "fa-brands fa-facebook" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+
+   <a href = "https://x.com/LIVEiTECH" target = "_blank" >
+    <i class = "fa-brands fa-x-twitter" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+
+   <a href = "https://www.instagram.com/liveitech/" target = "_blank" >
+    <i class = "fa-brands fa-instagram" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+
+   <a href = "https://www.youtube.com/channel/UCXq_QNtvHMJQCqChthZs6VA" target = "_blank" >
+    <i class = "fa-brands fa-youtube" style = "color:#e15a1f; padding-right:19px;" ></i >
+   </a >
+
+   <br><br>   <br><br>
+
+   <div class = "col-lg-12 copyright_text text-left text-sm-left" >
+    <div class = "wow fadeInRight animated" data-wow-duration = "2s" style = "font-size:18px" >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >&copy;2025&nbsp;LIVE i TECH, Inc.</a >
+     <br >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >(954)&nbsp;445-0712</a >
+     <br >
+     <a style = "color:gray !important; margin-left:11px;" href = "#" >Ft. Lauderdale, Fl</a >
+     <br ><br >
+     <a style = "color:green !important; font-size:14px; margin-left:9px;" href = "https:dtebar.pythonanywhere.com" target = "_blank" >
+      Tébar Software
+     </a >
+     <div class = "row" >
+      <br >
+     </div >
+    </div >
+   </div >
+  </div >
+ </div >
+</div >
+{% endif %}
+
+<script src = "{% static 'js/owlcarousel/jquery/jquery.js' %}" ></script >
+<script src = "{% static 'js/owlcarousel/owl.carousel.min.js' %}" ></script >
+
+<script src = "{% static 'js/iosbugfix.js' %}" ></script >
+<script src = "{% static 'js/doubletaptogo.js' %}" ></script >
+
+<script >
+ $('.owl-carousel').owlCarousel({
+  autoplay: 270,
+  autoplayHoverPause: true,
+  loop: true,
+  margin: 0,
+  nav: true,
+  autoHeight: true,
+  slideBy: 3,
+  responsive: {
+   0: {
+    items: 1,
+    slideBy: 1
+   },
+   600: {
+    items: 2,
+    slideBy: 2
+   },
+   1000: {
+    items: 3,
+    slideBy: 3
+   },
+   1600: {
+    items: 4,
+    slideBy: 3
+   }
+  }
+ });
+</script >
+<script >
+ $(function () {
+  $('#nav li:has(ul)').doubleTapToGo();
+ });
+</script >
+<script src = "{% static 'js/iosbugfix.js' %}" ></script >
+<script >
+ function setbg(color) {
+  document.getElementById("styled").style.background = color;
+ }
+</script >
+
+<!--
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<script src="{% static 'js/owlcarousel/owl.carousel2.thumbs.js' %}"></script>
+
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+<script src="{% static 'js/jquery.bcSwipe.js' %}"></script>
+
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+<script src="{% static 'js/materialize.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/gmaps.min.js' %}"></script>
+-->

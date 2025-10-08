@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Crawl-Delay: 10
+
+# Allow Google and YouTube bots specifically
+User-agent: Googlebot
+Allow: /
+
+User-agent: youtubetranscribe
+Allow: /

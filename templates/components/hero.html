@@ -1,0 +1,35 @@
+{% load static %}
+
+{% if hero %}
+<div id="ioswrapper" style="background-image: url('{{ hero.background_image.url }}');">
+  <div class="brand-logo">
+    <img src="{{ hero.logo_image.url }}"
+         alt="LIVEiTECH Logo">
+  </div>
+  <section class="hero-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% else %}
+<div id="ioswrapper">
+  <div class="brand-logo">
+    <img src="{% static 'images/logos/logo-large-light-2.png' %}"
+         alt="LIVEiTECH Logo">
+  </div>
+  <section class="hero-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endif %}

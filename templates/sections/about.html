@@ -1,0 +1,93 @@
+{% load strip_paragraphs %}
+{% if about %}
+<section id="about" class="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 ">
+        <div class="main_about_area">
+          <div class="head_title m-y-3 p-y-3 wow fadeInUp" style="margin-left:9px !important;">
+            <div class="row">
+              <div class="col-md-12">
+                <h3>{{ about.title }}</h3>
+                
+              </div>
+              <div class="col-md-12">
+                <h6>{{ about.subtitle|strip_outer_p|safe }}</h6>
+                <br>
+                {{ about.description|safe }}
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="container">
+            <div class="col-md-12">
+              <div class="center p-b-3 wow fadeInUp" data-wow-duration="700ms">
+                <div class="row">
+                  {% if about.service_1_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_1_icon }}">&nbsp {{ about.service_1_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_2_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_2_icon }}">&nbsp {{ about.service_2_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_3_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_3_icon }}">&nbsp {{ about.service_3_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_4_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_4_icon }}">&nbsp {{ about.service_4_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+                <div class="row">
+                  {% if about.service_5_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_5_icon }}">&nbsp {{ about.service_5_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_6_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_6_icon }}">&nbsp {{ about.service_6_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_7_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_7_icon }}">&nbsp {{ about.service_7_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                  {% if about.service_8_text %}
+                  <div class="col-md-3">
+                    <div class="single_abt single_about">
+                      <h3 class="{{ about.service_8_icon }}">&nbsp {{ about.service_8_text }}</h3>
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}

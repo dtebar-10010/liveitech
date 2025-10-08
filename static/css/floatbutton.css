@@ -1,0 +1,89 @@
+
+.menufloat{
+ position   : absolute;
+ width      : 159px;
+ top        : 0.09%;
+ left       : 16%;
+ color      : white;
+ text-align : left;
+}
+
+.my-menu-float{
+ margin    : 9px;;
+ padding   : 0px;
+ z-index   : 9999;
+ float     : left;
+ font-size : 22px;
+}
+
+.my-menu-float a:link{
+ line-height     : 2em;
+ text-decoration : none;
+}
+
+/* A link that has been visited */
+.my-menu-float a:visited{
+ color : gray;
+}
+
+/* A link that is hovered on */
+.my-menu-float a:hover{
+ color : #f15a29;
+}
+
+/* A link that is selected */
+.my-menu-float a:active{
+ color : green;
+}
+
+.logofloat{
+ position   : absolute;
+ width      : 333px;
+ top        : -1.55%;
+ left       : 68.43%;
+ color      : white;
+ text-align : left;
+}
+
+.my-logo-float{
+ margin    : 0px;;
+ padding   : 0px;
+ z-index   : 9999;
+ float     : right;
+ font-size : 22px;
+}
+
+.float-container{
+ position   : fixed;
+ top        : 9px;
+ right      : 1.00%;
+ transition : opacity 0.3s ease-in-out;
+ z-index    : 1;
+}
+
+.float{
+ position : relative;
+ width    : 44px;
+ height   : 44px;
+ display  : block;
+}
+
+.my-float{
+ margin-top  : 0;
+ padding-top : 0;
+ z-index     : 1;
+ /*float:left;*/
+}
+
+.float-phone{
+ margin-top  : 9px;
+ text-align  : center;
+ font-size   : 9px;
+ color       : white;
+ background  : transparent;
+ padding     : 2px 4px;
+ /*border-radius : 3px;*/
+ /*font-weight   : bold;*/
+ white-space : nowrap;
+ transform   : translateX(-5px);
+}

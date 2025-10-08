@@ -1,0 +1,35 @@
+{% load strip_paragraphs %}
+{% if examples_header %}
+  <div class="container">
+    <div id="examples" class="head_title wow fadeInUp">
+      <div class="col-md-12" style="margin-left:-17px !important;">
+        <div class="row">
+          <div>
+            <h3>{{ examples_header.title }}</h3>
+
+            <h6>{{ examples_header.subtitle|strip_outer_p|safe }}</h6>
+            <br>
+            {{ examples_header.description|safe }}
+            <br>
+          </div>
+        </div>
+      </div>
+      {% if examples %}
+        <div class="col-md-12 no-padding wow rollIn">
+          {% for video in examples %}
+            <div class="youtube-center video-responsive">
+              <iframe width="560"
+                      height="315"
+                      src="{{ video.youtube_url }}"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      referrerpolicy="strict-origin-when-cross-origin">
+              </iframe>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

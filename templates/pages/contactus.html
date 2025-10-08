@@ -1,0 +1,194 @@
+{% if contact %}
+<div class = "container" >
+ <div id = "contactus" class = "head_title wow fadeInUp" >
+  <div class = "col-md-12">
+   <div class = "row>" >
+    <h3 >{{ contact.title }}</h3 >
+    {{ contact.subtitle|safe }}
+    <p >{{ contact.phone }}</p >
+    <br >
+   </div >
+  </div >
+{% else %}
+<div class = "container" >
+ <div id = "contactus" class = "head_title wow fadeInUp" >
+  <div class = "col-md-12">
+   <div class = "row>" >
+    <h3 >Get LiT Now!</h3 >
+    <h6 >
+     Schedule a free assessment.
+    </h6 >
+    <p > (954)&nbsp;445-0712 </p >
+    <br >
+   </div >
+  </div >
+{% endif %}
+
+
+  <div class = "col-md-12 no-padding wow rollIn" >
+   <div class = "main_contactus_area p-t-2 p-x-3" >
+    
+<form action="php-pages/includes/send_mail.php" id="sendmailform" method="post" 
+    style="border: 1px solid whitesmoke; border-radius: 11px; padding: 20px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="form-control" name="name" required="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" class="form-control" name="company" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control" name="title" required="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" class="form-control" name="phone" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="email">eMail</label>
+                <input type="email" id="email" class="form-control" name="email" required="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" class="form-control" name="address" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="zipcode">Zip Code</label>
+                <input type="text" id="zipcode" class="form-control" name="zipcode" required="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" class="form-control" name="city" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="state">State</label>
+                <input type="text" id="state" class="form-control" name="state" required="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="systemofinterest">System of Interest</label>
+                <input type="text" id="systemofinterest" class="form-control" name="systemofinterest" required="">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="styled">Comments</label>
+                <textarea rows="9" id="styled" class="form-control" name="message"></textarea>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="currentcust">Current Customer?</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="currentcust" name="currentcust" class="toggle-checkbox">
+                    <label for="currentcust" class="toggle-label">
+                        <span class="toggle-inner"></span>
+                        <span class="toggle-switch-handle"></span>
+                    </label>
+                    <div class="toggle-text">
+                        <span class="toggle-off">N</span>
+                        <span class="toggle-on">Y</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="m-b-2 m-t-2 col-md-6 form-group">
+                <input type="submit" value="Send >" style="background-color:#e15a1f; margin-left:-17px; width:133px;">
+            </div>
+        </div>
+    </div>
+</form>
+
+   </div >
+  </div >
+
+  <div class = "row" >
+   <div class = "col-md-10 no-padding col-md-push-1" >
+    <div class = "main_contactus_area wow fadeInLeft" >
+     <div class = "single_contactus" >
+      <div class = "ourmap youtube-center video-responsive">
+       {% if contact %}
+       <iframe src = "{{ contact.google_maps_embed_url }}" width = "600" height = "450" allowfullscreen ></iframe >
+       {% else %}
+       <iframe src = "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d764022.0392365947!2d-81.10230656282094!3d26.32140860227949!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1556176806680!5m2!1sen!2sus" width = "600" height = "450" allowfullscreen ></iframe >
+       {% endif %}
+      </div >
+     </div >
+    </div >
+   </div >
+  </div >
+
+ </div >
+</div >
+
+<script >
+ document.addEventListener('DOMContentLoaded', function () {
+  // Nuclear option: Find and destroy the checkbox visually
+  const checkbox = document.getElementById('currentcust');
+  if (checkbox) {
+   // Make it completely invisible with JavaScript
+   checkbox.style.display = 'none';
+   checkbox.style.visibility = 'hidden';
+   checkbox.style.opacity = '0';
+   checkbox.style.position = 'absolute';
+   checkbox.style.left = '-99999px';
+   checkbox.style.top = '-99999px';
+   checkbox.style.zIndex = '-99999';
+   checkbox.style.width = '0';
+   checkbox.style.height = '0';
+   checkbox.style.background = 'transparent';
+   checkbox.style.border = 'none';
+   checkbox.style.outline = 'none';
+   checkbox.style.transform = 'scale(0)';
+
+   // Also try to hide it by removing from layout flow
+   checkbox.style.float = 'none';
+   checkbox.style.clear = 'none';
+  }
+
+  // Find any other checkboxes in the toggle switch and hide them
+  const toggleSwitch = document.querySelector('.toggle-switch');
+  if (toggleSwitch) {
+   const allCheckboxes = toggleSwitch.querySelectorAll('input[type="checkbox"]');
+   allCheckboxes.forEach(function (cb) {
+    cb.style.display = 'none !important';
+    cb.style.visibility = 'hidden !important';
+    cb.style.opacity = '0 !important';
+   });
+  }
+ });
+</script >

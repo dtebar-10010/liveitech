@@ -1,0 +1,2157 @@
+/* ========================================
+   BASE STYLES & RESET
+   ======================================== */
+
+*
+{
+  box-sizing: border-box;
+}
+
+html,
+body
+{
+  margin: auto;
+  /*background-color: black;*/
+
+  background: linear-gradient(33deg,
+      rgb(41, 0, 71) 0%,
+      rgb(1, 48, 32) 66%,
+      rgb(53, 3, 3) 100%);
+
+  font-size: 22px;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: #a0a0a0;
+  width: 100%;
+  -webkit-font-smoothing: antialiases;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1a1a1a;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+
+h1,
+h2
+{
+  font-weight: 400;
+  margin: 0;
+  line-height: 2rem;
+}
+
+h1
+{
+  font-size: 2.571rem;
+  line-height: 3.5rem;
+  color: #f15a29;
+}
+
+h2
+{
+  font-size: 2.143rem;
+  line-height: 2.5rem;
+  color: #f15a29;
+}
+
+h3
+{
+  font-size: 1.714rem;
+  line-height: 2.5rem;
+  margin-bottom: 30px;
+  color: #f15a29;
+}
+
+h4
+{
+  font-size: 1.286rem;
+  line-height: 2rem;
+  font-weight: 500;
+  color: #f15a29;
+}
+
+h6
+{
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #f15a29;
+}
+
+p
+{
+  line-height: 1.375rem;
+  margin: 0 0 15px;
+}
+
+p:last-child
+{
+  margin-bottom: 0;
+}
+
+/* ========================================
+   LAYOUT COMPONENTS
+   ======================================== */
+
+.container,
+.container-fluid
+{
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.row
+{
+  margin-bottom: 0;
+}
+
+.clear
+{
+  clear: both;
+}
+
+/* ========================================
+   NAVIGATION & HEADER
+   ======================================== */
+
+.hero-section
+{
+  position: relative;
+  min-height: 150px;
+}
+
+.brand-logo
+{
+  float: right;
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.brand-logo img
+{
+  width: 100%;
+  height: auto;
+  border: 1px solid whitesmoke;
+  border-radius: 11px;
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+#ioswrapper
+{
+  position: relative;
+  background-color: #000000;
+  padding: 0px;
+  margin: 0;
+  margin-right: 100px;
+  background: url(../images/background/city-network-tech.jpg) no-repeat top center;
+  background-size: cover;
+  border: none;
+  width: 100%;
+  height: 500px;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+}
+
+.myherotext
+{
+  position: absolute;
+  padding: 0;
+  margin: auto;
+  color: white;
+  font-weight: 600;
+}
+
+.myherotext p
+{
+  line-height: 1em;
+}
+
+.scrolldown
+{
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  margin-left: -17px;
+}
+
+.scrolldown a i
+{
+  width: 35px;
+  height: 35px;
+  border: 2px solid #fff;
+  line-height: 30px;
+  border-radius: 50%;
+  -webkit-transition: all 500ms ease-in-out 0s;
+  -moz-transition: all 500ms ease-in-out 0s;
+  -ms-transition: all 500ms ease-in-out 0s;
+  transition: all 500ms ease-in-out 0s;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.scrolldown a:hover i
+{
+  opacity: 0.85;
+  transform: scale(1.2);
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+
+.main_about_area
+{
+  overflow: hidden;
+  margin-top: 9px;
+  padding-top: 0;
+  margin-bottom: 9px;
+}
+
+.main_about_area .single_about i
+{
+  border: 1px solid #ff9a5e;
+  color: #ff9a5e;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 2.225rem;
+  border-radius: 50%;
+  margin-bottom: 1.875rem;
+}
+
+.head_title
+{
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.head_title h2
+{
+  line-height: 4rem;
+  color: #231f20;
+}
+
+.head_title h6
+{
+  border-left: 2px solid #999;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.head_title h6 p
+{
+  border-left: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.head_title p
+{
+  padding-left: 20px;
+}
+
+/* Added border to h6 p elements for subtitle content */
+
+.single_about
+{
+  margin-top: 0;
+}
+
+.about_content_center
+{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.container .single_about h3[class*="fa-"],
+.container .single_about h3.fa
+{
+  font-size: 0.7rem;
+}
+
+/* ========================================
+   SERVICES SECTION
+   ======================================== */
+
+.service .container-fluid
+{
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main_service_content
+{
+  overflow: hidden;
+}
+
+.main_service_content .col-sm-push-6
+{
+  left: 52%;
+}
+
+.main_service_content .single_service_area
+{
+  overflow: hidden;
+}
+
+.main_service_content img
+{
+  width: 100%;
+}
+
+.main_service_content .single_service
+{
+  margin-top: 25%;
+}
+
+.main_service_content .single_service h2
+{
+  font-weight: 700;
+  color: #231f20;
+}
+
+.single_service.single_service_left_text
+{
+  margin-left: 15%;
+}
+
+/* ========================================
+   PORTFOLIO SECTION
+   ======================================== */
+
+.main_portfolio_area
+{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.main_portfolio_content
+{
+  display: inline-block;
+}
+
+.main_portfolio_content .single_portfolio
+{
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.main_portfolio_content .single_portfolio img
+{
+  width: 100%;
+}
+
+.main_portfolio_content .single_portfolio:hover .single_portfolio_overlay
+{
+  opacity: 1;
+}
+
+.single_portfolio_overlay
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(221, 221, 221, 0.22);
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.single_portfolio_overlay .icon_area
+{
+  position: absolute;
+  top: 33%;
+  width: 100%;
+  height: 100%;
+}
+
+.single_portfolio_overlay .icon_area img
+{
+  width: 27px;
+  height: 25px;
+}
+
+.single_portfolio img
+{
+  width: 100%;
+  height: 280px;
+}
+
+.single_portfolio.height_1 img
+{
+  width: 100%;
+  height: 575px;
+}
+
+.single_portfolio.height_1 .icon_area img
+{
+  width: 27px;
+  height: 25px;
+}
+
+/* ========================================
+   TEAM SECTION
+   ======================================== */
+
+.main_team_area
+{
+  overflow: hidden;
+}
+
+.main_team_area .main_team_content
+{
+  margin-bottom: 80px;
+  display: inline-block;
+}
+
+.single_team
+{
+  overflow: hidden;
+}
+
+.single_team:hover .team_socail_area
+{
+  max-height: 40px;
+  overflow: hidden;
+}
+
+.single_team:hover .single_team_text
+{
+  display: none;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.team_social_area
+{
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  transition: max-height 1s;
+  overflow: hidden;
+  max-height: 0;
+}
+
+.team_social_area a i
+{
+  color: #cecece;
+  padding: 5px;
+  transition: all 0.6s;
+}
+
+.team_social_area a:hover i
+{
+  color: #444;
+}
+
+.main_team_area .single_team img
+{
+  width: 100%;
+}
+
+.main_team_area .single_team .single_team_text
+{
+  padding: 20px;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+  font-weight: 300;
+}
+
+.main_team_area .single_team .single_team_text h6
+{
+  font-weight: 700;
+  color: #231f20;
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   ======================================== */
+
+.main_testimonial_area .head_title h2
+{
+  color: #fff;
+}
+
+.main_testimonial_area .head_title h6
+{
+  color: #fff;
+}
+
+.testimonial_content .single_test h3
+{
+  width: 80%;
+  margin: 30px auto;
+  color: #fff;
+}
+
+.testimonial_content .single_test h3:before
+{
+  content: "\f10e";
+  text-align: left;
+  font-family: fontawesome, Arial, sans-serif;
+  font-size: 3rem;
+  color: #7d7b7d;
+  position: absolute;
+  z-index: -1;
+  padding: 5px;
+  left: 9%;
+}
+
+.testimonial_content .single_test p
+{
+  font-size: 10px;
+  font-weight: 100;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   BLOG SECTION
+   ======================================== */
+
+.main_blog_area
+{
+  overflow: hidden;
+}
+
+.main_blog_area .single_blog_menu h2
+{
+  border-right: 2px solid #bbb;
+}
+
+.main_blog_area .single_blog_menu ul
+{
+  margin-top: 30%;
+}
+
+.main_blog_area .single_blog_menu ul li a
+{
+  color: #bbb;
+  line-height: 2.5rem;
+}
+
+.main_blog_area .single_blog_menu ul li.active a
+{
+  color: #1e1e1e;
+  font-weight: 700;
+}
+
+.main_blog_area .single_blog .single_blog_text h6
+{
+  font-weight: 500;
+}
+
+.main_blog_area .single_blog .single_blog_text span
+{
+  font-weight: 100;
+  font-size: 0.714rem;
+}
+
+.single_blog_img
+{
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.main_contactus_area
+{
+  /*background: #000;*/
+  background: transparent;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 50px;
+}
+
+.main_contactus_area .head_title
+{
+  width: 100%;
+}
+
+.main_contactus_area .head_title h2
+{
+  color: #fff;
+}
+
+.main_contactus_area input[type="submit"]
+{
+  appearance: button;
+  -webkit-appearance: button;
+  cursor: pointer;
+  width: 20%;
+  background: #1c1c1c;
+  border: 1px solid #555;
+  border-radius: 30px;
+  height: 36px;
+  font-size: 0.875rem;
+  transition: all 0.6s;
+  color: #ddd;
+}
+
+.main_contactus_area input[type="submit"]:hover
+{
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+}
+
+.main_contactus_area input[type="submit"]:focus
+{
+  outline: 0;
+}
+
+.form-group label
+{
+  color: #f15a29 !important;
+  /* Example color */
+  font-family: sans-serif;
+  /* Optional: style the font */
+  font-weight: bold;
+  /* Optional: make it bold */
+}
+
+/* ========================================
+   MAP
+   ======================================== */
+
+.ourmap
+{
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.footer
+{
+  background: black;
+}
+
+.main_footer
+{
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.main_footer .footer_logo a img
+{
+  width: 33%;
+  padding-top: 3px;
+  padding-left: 3px;
+  border: none;
+}
+
+.main_footer .copyright_text p
+{
+  line-height: 2rem;
+  color: #a0a0a0;
+  padding: 11px;
+}
+
+.main_footer .copyright_text a
+{
+  padding: 11px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_footer .copyright_text i
+{
+  padding: 0 5px;
+  color: #ff0000;
+}
+
+/* ========================================
+   TOGGLE SWITCHES
+   ======================================== */
+
+.toggle-switch
+{
+  position: relative;
+  display: inline-block;
+  margin: 11px;
+  overflow: hidden;
+}
+
+.toggle-checkbox,
+input#currentcust,
+input[type="checkbox"]#currentcust,
+.toggle-switch input[type="checkbox"]
+{
+  position: absolute;
+  left: -999999px;
+  top: -999999px;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  z-index: -999999;
+  background: black;
+  color: black;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  transform: scale(0);
+}
+
+.toggle-checkbox::before,
+.toggle-checkbox::after,
+input#currentcust::before,
+input#currentcust::after
+{
+  display: none;
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+}
+
+.toggle-label
+{
+  display: block;
+  width: 60px;
+  height: 40px;
+  background-color: black;
+  border-radius: 11px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.toggle-switch-handle
+{
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 33%;
+  transition: transform 0.3s;
+  z-index: 11;
+}
+
+.toggle-checkbox:checked + .toggle-label
+{
+  background-color: #e15a1f;
+}
+
+.toggle-checkbox:checked + .toggle-label .toggle-switch-handle
+{
+  transform: translateX(30px);
+}
+
+.toggle-text
+{
+  position: absolute;
+  top: 6px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.toggle-on
+{
+  position: absolute;
+  left: 8px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.toggle-off
+{
+  position: absolute;
+  right: 8px;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.toggle-checkbox:checked ~ .toggle-text .toggle-on
+{
+  opacity: 1;
+}
+
+.toggle-checkbox:checked ~ .toggle-text .toggle-off
+{
+  opacity: 0;
+}
+
+/* Legacy Toggle (kept for compatibility) */
+.switch
+{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input
+{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider
+{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f15a29;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before
+{
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider
+{
+  background-color: #f15a29;
+}
+
+input:focus + .slider
+{
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before
+{
+  transform: translateX(26px);
+}
+
+.slider.round
+{
+  border-radius: 34px;
+}
+
+.slider.round:before
+{
+  border-radius: 50%;
+}
+
+/* ========================================
+   BUTTONS & INTERACTIVE ELEMENTS
+   ======================================== */
+
+.btn,
+.btn-large,
+.btn-flat
+{
+  text-transform: lowercase;
+}
+
+/*.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:focus,
+.btn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+  outline: 0;
+}*/
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.overlay
+{
+  background: rgba(0, 0, 0, 0.22);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 99999;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.preloader h2
+{
+  font-size: 3rem;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.loaded
+{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+}
+
+.normal-container
+{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* ========================================
+   LISTS & LINKS
+   ======================================== */
+
+ul
+{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a
+{
+  text-decoration: none;
+  outline: 0;
+}
+
+a:focus
+{
+  outline: 0;
+}
+
+a:hover
+{
+  text-decoration: none;
+}
+
+/* ========================================
+   IMAGES & MEDIA
+   ======================================== */
+
+img
+{
+  max-width: 100%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 3px solid grey;
+  border-style: solid;
+  margin: 11px;
+  width: 88%;
+}
+
+/* Specific image borders */
+img[src$=".jpg"],
+img[src$=".jpeg"],
+img[src$=".JPG"],
+img[src$=".JPEG"],
+img[src$=".png"],
+img[src$=".PNG"],
+img[src*=".jpg"],
+img[src*=".jpeg"],
+img[src*=".png"]
+{
+  border: 1px solid whitesmoke;
+  border-radius: 11px;
+}
+
+/* Video containers */
+.videoWrapper
+{
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper iframe
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.youtube-right
+{
+  float: right;
+  margin-bottom: 77px;
+}
+
+.youtube-center
+{
+  clear: both;
+  margin: auto;
+  margin-bottom: 33px;
+}
+
+.video-responsive
+{
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe
+{
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* iframe borders */
+iframe,
+.youtube-center iframe,
+.video-responsive iframe,
+iframe[src*="youtube"],
+iframe[src*="youtube-nocookie"],
+.ourmap iframe,
+iframe[src*="google.com/maps"]
+{
+  border: 1px solid whitesmoke;
+  border-radius: 11px;
+}
+
+/* ========================================
+   SCROLL ELEMENTS
+   ======================================== */
+
+.scrollup
+{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  opacity: 0.3;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  z-index: 1000;
+  transition: opacity 0.5s, background-color 0.5s;
+  -moz-transition: opacity 0.5s, background-color 0.5s;
+  -webkit-transition: opacity 0.5s, background-color 0.5s;
+}
+
+.scrollup:hover
+{
+  background: #fff;
+  opacity: 1;
+}
+
+.scrollup i
+{
+  font-size: 13px;
+  position: absolute;
+  opacity: 1;
+  color: #333;
+  left: 0;
+  top: 50%;
+  margin-top: -7px;
+  margin-left: -6px;
+  text-decoration: none;
+}
+
+.scrollup a i
+{
+  background: #555;
+  color: #ddd;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  transition: all 0.6s;
+}
+
+.scrollup a:hover i
+{
+  background: #fff;
+  color: #333;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar
+{
+  width: 12px;
+}
+
+::-webkit-scrollbar-track
+{
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #555;
+  border-radius: 6px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+  background: #777;
+}
+
+::-webkit-scrollbar-thumb:active
+{
+  background: #999;
+}
+
+.scrollable-element
+{
+  scrollbar-width: thin;
+  scrollbar-color: #555 #1a1a1a;
+}
+
+.scrollable-element::-webkit-scrollbar
+{
+  width: 8px;
+}
+
+.scrollable-element::-webkit-scrollbar-track
+{
+  background: #1a1a1a;
+}
+
+.scrollable-element::-webkit-scrollbar-thumb
+{
+  background: #555;
+  border-radius: 4px;
+}
+
+.scrollable-element::-webkit-scrollbar-thumb:hover
+{
+  background: #777;
+}
+
+/* ========================================
+   FORM ELEMENTS
+   ======================================== */
+.form-control
+{
+  display: block;
+  width: 40%;
+  /* Increased from 33% to 40% (20% wider) */
+  height: 45px;
+  /* Standardized height */
+  font-size: 0.9rem;
+  /* Improved from .77rem and .50rem */
+  line-height: 1.11rem;
+  color: #ddd;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 11px;
+  /* Added border radius for consistency */
+  border-bottom: 1px solid #555;
+  outline: 0;
+  padding: 8px 12px;
+  /* Added padding for better usability */
+}
+
+.form-control:focus
+{
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075),
+    0 0 0px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075),
+    0 0 0px rgba(102, 175, 233, 0.6);
+}
+
+input:not([type]):focus:not([readonly]),
+input[type="text"]:focus:not([readonly]),
+input[type="password"]:focus:not([readonly]),
+input[type="email"]:focus:not([readonly]),
+input[type="url"]:focus:not([readonly]),
+input[type="time"]:focus:not([readonly]),
+input[type="date"]:focus:not([readonly]),
+input[type="datetime"]:focus:not([readonly]),
+input[type="datetime-local"]:focus:not([readonly]),
+input[type="tel"]:focus:not([readonly]),
+input[type="number"]:focus:not([readonly]),
+input[type="search"]:focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly])
+{
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+textarea.form-control:focus:not([readonly])
+{
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+textarea
+{
+  resize: none;
+  height: 155px;
+}
+
+textarea#styled
+{
+  width: 100%;
+  height: 73px;
+  border: none;
+  border-bottom: 1px solid #a0a0a0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 22px;
+}
+
+input
+{
+  height: 2.5em;
+  float: left;
+}
+
+label
+{
+  width: 199px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  line-height: 1em;
+  color: #555;
+  clear: both;
+}
+
+.form-group label
+{
+  display: block;
+  /* Makes the label take up its own line */
+  text-align: left;
+  /* Aligns the text to the left */
+  margin-bottom: 5px;
+  /* Adds a small space between the label and the input */
+  font-weight: bold;
+  /* Optional: makes the label text bold */
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS
+   ======================================== */
+
+/* Large Tablets and Small Laptops */
+@media only screen and (max-width: 1024px)
+{
+
+  html,
+  body
+  {
+    font-size: 20px;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 30%;
+  }
+
+  .form-control
+  {
+    width: 60%;
+    /* Increased from 50% to 60% (20% wider) */
+    height: 40px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .brand-logo
+  {
+    width: 250px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .brand-logo img
+  {
+    max-width: 230px;
+    margin: 0;
+  }
+
+  #ioswrapper
+  {
+    height: 400px;
+  }
+
+  .myherotext
+  {
+    font-size: 0.9em;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Standard Tablets */
+@media only screen and (max-width: 767px)
+{
+
+  html,
+  body
+  {
+    font-size: 18px;
+  }
+
+  h1
+  {
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+  }
+
+  h2
+  {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  h3
+  {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 40%;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .form-control
+  {
+    width: 84%;
+    /* Increased from 70% to 84% (20% wider) */
+    height: 45px;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  textarea
+  {
+    height: 120px;
+  }
+
+  textarea#styled
+  {
+    height: 100px;
+    font-size: 18px;
+  }
+
+  .brand-logo
+  {
+    width: 200px;
+    top: 15px;
+    right: 15px;
+    position: absolute;
+    z-index: 1000;
+  }
+
+  .brand-logo img
+  {
+    max-width: 180px;
+    margin: 0;
+  }
+
+  #ioswrapper
+  {
+    height: 350px;
+  }
+
+  .main_service_content .single_service
+  {
+    margin-top: 15%;
+    margin-left: 5%;
+  }
+
+  .single_service.single_service_left_text
+  {
+    margin-left: 5%;
+  }
+
+  .ourmap
+  {
+    height: 400px;
+    margin-top: 15px;
+  }
+
+  .main_about_area .single_about i
+  {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .single_portfolio img
+  {
+    height: 220px;
+  }
+
+  .single_portfolio.height_1 img
+  {
+    height: 450px;
+  }
+
+  .myherotext
+  {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Large Phones and Small Tablets */
+@media only screen and (max-width: 480px)
+{
+
+  html,
+  body
+  {
+    font-size: 16px;
+  }
+
+  h1
+  {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+
+  h2
+  {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  h3
+  {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  h4
+  {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 60%;
+    height: 44px;
+    font-size: 1rem;
+    border-radius: 22px;
+  }
+
+  .form-control
+  {
+    width: 100%;
+    /* Increased from 90% to 100% */
+    height: 44px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+
+  textarea
+  {
+    height: 100px;
+  }
+
+  textarea#styled
+  {
+    height: 80px;
+    font-size: 16px;
+  }
+
+  .brand-logo
+  {
+    width: 140px;
+  }
+
+  #ioswrapper
+  {
+    height: 350px;
+  }
+
+  .main_service_content .single_service
+  {
+    margin-top: 10%;
+    margin-left: 2%;
+  }
+
+  .single_service.single_service_left_text
+  {
+    margin-left: 2%;
+  }
+
+  .ourmap
+  {
+    height: 300px;
+    margin-top: 40px;
+  }
+
+  .main_about_area .single_about i
+  {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .single_portfolio img
+  {
+    height: 180px;
+  }
+
+  .single_portfolio.height_1 img
+  {
+    height: 360px;
+  }
+
+  .myherotext
+  {
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    margin: 15px auto;
+    font-size: 0.9em;
+  }
+
+  .scrolldown
+  {
+    bottom: 5%;
+  }
+
+  .scrolldown a i
+  {
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+  }
+
+  img
+  {
+    margin: 8px;
+    width: 92%;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Standard Phones */
+@media only screen and (max-width: 375px)
+{
+
+  html,
+  body
+  {
+    font-size: 15px;
+  }
+
+  h1
+  {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  h2
+  {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+
+  h3
+  {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 70%;
+    height: 42px;
+    font-size: 0.9rem;
+  }
+
+  .form-control
+  {
+    width: 100%;
+    /* Already at max */
+    height: 42px;
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+
+  .brand-logo
+  {
+    width: 120px;
+  }
+
+  #ioswrapper
+  {
+    height: 250px;
+  }
+
+  .ourmap
+  {
+    height: 250px;
+    margin-top: 15px;
+  }
+
+  .main_about_area .single_about i
+  {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .single_portfolio img
+  {
+    height: 150px;
+  }
+
+  .single_portfolio.height_1 img
+  {
+    height: 300px;
+  }
+
+  .myherotext
+  {
+    padding: 12px;
+    margin: 12px auto;
+    font-size: 0.85em;
+  }
+
+  img
+  {
+    margin: 6px;
+    width: 94%;
+  }
+
+  .toggle-switch
+  {
+    margin: 8px;
+  }
+
+  .toggle-label
+  {
+    width: 50px;
+    height: 32px;
+  }
+
+  .toggle-switch-handle
+  {
+    width: 20px;
+    height: 20px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .toggle-switch-handle
+  {
+    transform: translateX(24px);
+  }
+
+  .toggle-text
+  {
+    font-size: 10px;
+    top: 5px;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Small Phones */
+@media only screen and (max-width: 320px)
+{
+
+  html,
+  body
+  {
+    font-size: 14px;
+  }
+
+  h1
+  {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+
+  h2
+  {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+
+  h3
+  {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 80%;
+    height: 40px;
+    font-size: 0.85rem;
+  }
+
+  .form-control
+  {
+    width: 100%;
+    /* Already at max */
+    height: 40px;
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .brand-logo
+  {
+    width: 100px;
+  }
+
+  #ioswrapper
+  {
+    height: 200px;
+  }
+
+  .ourmap
+  {
+    height: 200px;
+    margin-top: 12px;
+  }
+
+  .main_about_area .single_about i
+  {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .single_portfolio img
+  {
+    height: 120px;
+  }
+
+  .single_portfolio.height_1 img
+  {
+    height: 240px;
+  }
+
+  .myherotext
+  {
+    padding: 10px;
+    margin: 10px auto;
+    font-size: 0.8em;
+  }
+
+  img
+  {
+    margin: 4px;
+    width: 96%;
+  }
+
+  .toggle-switch
+  {
+    margin: 6px;
+  }
+
+  .toggle-label
+  {
+    width: 45px;
+    height: 28px;
+  }
+
+  .toggle-switch-handle
+  {
+    width: 18px;
+    height: 18px;
+    top: 2px;
+    left: 2px;
+  }
+
+  .toggle-checkbox:checked + .toggle-label .toggle-switch-handle
+  {
+    transform: translateX(20px);
+  }
+
+  .toggle-text
+  {
+    font-size: 9px;
+    top: 4px;
+  }
+
+  .scrollup
+  {
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+  }
+
+  .scrollup i
+  {
+    font-size: 11px;
+  }
+
+  .videoWrapper
+  {
+    padding-top: 20px;
+  }
+
+  .video-responsive
+  {
+    padding-bottom: 56.25%;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Specific breakpoints for legacy compatibility */
+@media only screen and (max-width: 1368px)
+{
+  .single_service
+  {
+    margin-left: 16%;
+  }
+
+  .single_blog_img
+  {
+    margin-left: 3%;
+  }
+
+  .ourmap
+  {
+    max-width: 88%;
+  }
+
+  .copyright_text
+  {
+    font-size: 11px;
+    margin: auto;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+}
+
+/* Landscape orientation adjustments */
+@media only screen and (max-height: 500px) and (orientation: landscape)
+{
+  #ioswrapper
+  {
+    height: 180px;
+  }
+
+  .myherotext
+  {
+    padding: 8px;
+    margin: 8px auto;
+  }
+
+  .brand-logo
+  {
+    margin-top: 4px;
+  }
+}
+
+/* ========================================
+   HIGH RESOLUTION DISPLAYS
+   ======================================== */
+
+/* Standard Desktop Monitors */
+@media only screen and (min-width: 1025px) and (max-width: 2152px)
+{
+
+  html,
+  body
+  {
+    font-size: 24px;
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+
+  .container,
+  .container-fluid
+  {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  #ioswrapper
+  {
+    height: 600px;
+    background-attachment: fixed;
+    /*margin-left: 33%;*/
+    /*margin-right: 100px;*/
+  }
+
+  .brand-logo
+  {
+    width: 350px;
+    margin-top: 10px;
+    /*margin-right: 100px;*/
+  }
+
+  .brand-logo img
+  {
+    max-width: 320px;
+    /*margin-right: 100px;*/
+  }
+
+  .myherotext
+  {
+    position: absolute;
+    right: 8%;
+    top: 25%;
+    font-size: 1.1em;
+    max-width: 45%;
+  }
+
+  .main_contactus_area input[type="submit"]
+  {
+    width: 15%;
+    height: 50px;
+    font-size: 1.1rem;
+  }
+
+  .form-control
+  {
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+
+  .ourmap
+  {
+    height: 700px;
+  }
+
+  .single_portfolio img
+  {
+    height: 320px;
+  }
+
+  .single_portfolio.height_1 img
+  {
+    height: 650px;
+  }
+
+  .form-group label
+  {
+    display: block;
+    /* Makes the label take up its own line */
+    text-align: left;
+    /* Aligns the text to the left */
+    margin-bottom: 5px;
+    /* Adds a small space between the label and the input */
+    font-weight: bold;
+    /* Optional: makes the label text bold */
+  }
+
+  /* Ensure the subtitle border remains visible at high resolutions */
+  .head_title h6
+  {
+    border-left: 2px solid #999 !important;
+    padding-left: 20px !important;
+  }
+
+}
+
+/* ========================================
+   ACCESSIBILITY & PREFERENCES
+   ======================================== */
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce)
+{
+  *
+  {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+
+  .toggle-switch-handle,
+  .slider
+  {
+    transition: none;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark)
+{
+  ::-webkit-scrollbar-track
+  {
+    background: #0a0a0a;
+  }
+
+  ::-webkit-scrollbar-thumb
+  {
+    background: #404040;
+  }
+}
+
+/* ========================================
+   CKEDITOR CUSTOM STYLES
+   ======================================== */
+
+/* CKEditor gray background */
+.ck-editor__editable {
+  background-color: #333 !important;
+}
+
+.ck-editor__editable_inline {
+  background-color: #333 !important;
+}
+
+/* Optional: adjust text color for better contrast on gray background */
+.ck-editor__editable {
+  color: #333 !important;
+}

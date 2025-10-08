@@ -1,0 +1,6 @@
+{
+  "customInstructions": "Use technical terminology and professional language in all responses. Avoid playful or casual terms.",
+  "api": {
+    "provider": "anthropic"
+  }
+}

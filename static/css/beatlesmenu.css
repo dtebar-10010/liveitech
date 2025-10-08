@@ -1,0 +1,211 @@
+
+nav ul li{
+ transition : background-color .3s;
+ float      : none;
+ padding    : 0;
+ text-align : center;
+}
+
+#mynav{
+ position         : fixed !important;
+ top              : 0;
+ left             : 0;
+ z-index          : 9999 !important;
+ border           : none !important;
+ max-width        : 56% !important;
+ background-color : transparent !important;
+ color            : #e15a1f !important;
+ box-shadow       : none !important;
+}
+
+#mynav span:after{
+ width            : 0;
+ height           : 0;
+ border           : 0.313em solid transparent;
+ border-bottom    : none;
+ border-top-color : #bb0a1e;
+ content          : '';
+ vertical-align   : middle;
+ display          : inline-block;
+ position         : relative;
+ right            : -0.313em;
+}
+
+#mynav > a{
+ position         : fixed;
+ top              : 3.4%;
+ left             : 2.22%;
+ z-index          : 10000 !important;
+ width            : 1.8em;
+ height           : 1.8em;
+ text-align       : left !important;
+ text-indent      : -9999px;
+ background-color : #e15a1f !important;
+ border           : none !important;
+ display          : none;
+ text-decoration  : none;
+ border-radius    : 3px;
+ box-shadow       : 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#mynav > a:before,
+#mynav > a:after{
+ position : absolute;
+ border   : 2px solid white;
+ top      : 35%;
+ left     : 25%;
+ right    : 25%;
+ content  : '';
+}
+
+#mynav > a:after{
+ top : 60%;
+}
+
+#mynav:not( :target ) > a:first-of-type,
+#mynav:target > a:last-of-type{
+ display : block;
+}
+
+/* Menu dropdown */
+#mynav > ul{
+ position         : fixed;
+ top              : 10.2%;
+ left             : 1.53%;
+ z-index          : 9998 !important;
+ background-color : #e15a1f !important;
+ width            : 200px;
+ max-width        : none;
+ height           : auto;
+ display          : none;
+ text-align       : left !important;
+ padding-left     : .333em;
+ box-shadow       : 0 4px 8px rgba(0, 0, 0, 0.3);
+ border-radius    : 11px;
+ border           : 1px solid whitesmoke;
+}
+
+/* Show menu when target is active */
+#mynav:target > ul{
+ display : block;
+}
+
+#mynav > ul > li{
+ height : 89%;
+ float  : none;
+}
+
+#mynav > ul > li > a{
+ height          : auto;
+ font-size       : 1.333em;
+ line-height     : 1.73em;
+ text-align      : left !important;
+ text-decoration : none;
+ color           : white;
+ padding         : 0;
+}
+
+#mynav > ul > li:not( :last-child ) > a{
+ border-right  : none;
+ border-bottom : 1px solid black;
+}
+
+#mynav > ul > li:hover > a,
+#mynav > ul:not( :hover ) > li.active > a{
+ background-color : gray;
+}
+
+#mynav li{
+ position : relative;
+}
+
+#mynav li a{
+ display         : block;
+ text-decoration : none;
+}
+
+#mynav li a:active{
+
+}
+
+#mynav li ul{
+ position         : absolute;
+ top              : 100%;
+ left             : 0;
+ right            : 0;
+ z-index          : 1;
+ padding          : 0;
+ margin           : 0;
+ background-color : gray;
+ display          : none;
+ border           : 1px solid whitesmoke;
+ border-radius    : 11px;
+}
+
+#mynav li:hover ul{
+ display : block;
+ left    : 0;
+ right   : 0;
+}
+
+#mynav li:not( :first-child ):hover ul{
+ left : -1px;
+}
+
+#mynav li ul a{
+ border-top      : 1px solid #e15a1f;
+ padding         : 0.35em;
+ font-size       : 1em;
+ line-height     : 1.1em;
+ text-align      : left !important;
+ text-decoration : none;
+ color           : white;
+}
+
+#mynav li ul li a:hover,
+#mynav li ul:not( :hover ) li.active a{
+ background-color : #e15a1f;
+}
+
+.menu-container{
+ position : relative;
+}
+
+.banner{
+ float         : right;
+ padding-top   : 11px;
+ padding-right : 9px;
+ font-family   : sans-serif;
+ font-size     : 77%;
+}
+
+.banner p{
+ margin      : 0;
+ padding     : 0;
+ color       : #e15a1f;
+ line-height : normal;
+ font-weight : 300;
+ font-size   : 22px;
+}
+
+@media only screen and (max-width : 640px){
+ #mynav{
+  position  : fixed !important;
+  max-width : 47% !important;
+  left      : -16px;
+ }
+}
+
+@media only screen and (max-width : 320px){
+ #mynav{
+  position  : fixed !important;
+  max-width : 53.33% !important;
+  left      : -16px;
+ }
+}
+
+#mynav > ul > li:hover > a,
+#mynav > ul:not( :hover ) > li.active > a{
+ background-color : gray;
+ border-radius    : 11px;
+}
