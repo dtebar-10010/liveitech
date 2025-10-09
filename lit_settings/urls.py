@@ -18,3 +18,8 @@ if settings.DEBUG :
  urlpatterns +=\
   static( settings.MEDIA_URL,
     document_root = settings.MEDIA_ROOT )
+else:
+ # In production, serve media files (static files handled by WhiteNoise)
+ urlpatterns +=\
+  static( settings.MEDIA_URL,
+    document_root = settings.MEDIA_ROOT )
