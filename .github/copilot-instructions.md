@@ -52,7 +52,7 @@ python manage.py populate_content
 
 ### CKEditor Integration
 - Rich text editing via `django_ckeditor_5` with custom toolbar configurations
-- **Critical**: Subtitle fields use `strip_outer_p` template filter to remove CKEditor's automatic `<p>` wrappers
+- **Critical**: Subtitle fields use `strip_outer_p` template filter to remove CKEditor's automatic `&lt;p&gt;` wrappers
 - Example: `{{ about.subtitle|strip_outer_p|safe }}` in templates
 - Configuration in `settings.py` includes custom color palettes and toolbar layouts
 

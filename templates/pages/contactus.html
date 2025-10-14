@@ -1,161 +1,291 @@
 {% if contact %}
-<div class = "container" >
- <div id = "contactus" class = "head_title wow fadeInUp" >
-  <div class = "col-md-12">
-   <div class = "row>" >
-    <h3 >{{ contact.title }}</h3 >
-    {{ contact.subtitle|safe }}
-    <p >{{ contact.phone }}</p >
-    <br >
-   </div >
-  </div >
-{% else %}
-<div class = "container" >
- <div id = "contactus" class = "head_title wow fadeInUp" >
-  <div class = "col-md-12">
-   <div class = "row>" >
-    <h3 >Get LiT Now!</h3 >
-    <h6 >
-     Schedule a free assessment.
-    </h6 >
-    <p > (954)&nbsp;445-0712 </p >
-    <br >
-   </div >
-  </div >
-{% endif %}
-
-
-  <div class = "col-md-12 no-padding wow rollIn" >
-   <div class = "main_contactus_area p-t-2 p-x-3" >
-    
-<form action="php-pages/includes/send_mail.php" id="sendmailform" method="post" 
-    style="border: 1px solid whitesmoke; border-radius: 11px; padding: 20px;">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="form-control" name="name" required="">
+    <div class = "container">
+        <div id = "contactus" class = "head_title wow fadeInUp">
+            <div class = "col-md-12">
+                <div class = "row>">
+                    <h3>{{ contact.title }}</h3>
+                    {{ contact.subtitle|safe }}
+                    <p>{{ contact.phone }}</p>
+                    <br>
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="company">Company</label>
-                <input type="text" id="company" class="form-control" name="company" required="">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" class="form-control" name="title" required="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="phone">Phone</label>
-                <input type="text" id="phone" class="form-control" name="phone" required="">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="email">eMail</label>
-                <input type="email" id="email" class="form-control" name="email" required="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" id="address" class="form-control" name="address" required="">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="zipcode">Zip Code</label>
-                <input type="text" id="zipcode" class="form-control" name="zipcode" required="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="city">City</label>
-                <input type="text" id="city" class="form-control" name="city" required="">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="state">State</label>
-                <input type="text" id="state" class="form-control" name="state" required="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="systemofinterest">System of Interest</label>
-                <input type="text" id="systemofinterest" class="form-control" name="systemofinterest" required="">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="styled">Comments</label>
-                <textarea rows="9" id="styled" class="form-control" name="message"></textarea>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="currentcust">Current Customer?</label>
-                <div class="toggle-switch">
-                    <input type="checkbox" id="currentcust" name="currentcust" class="toggle-checkbox">
-                    <label for="currentcust" class="toggle-label">
-                        <span class="toggle-inner"></span>
-                        <span class="toggle-switch-handle"></span>
-                    </label>
-                    <div class="toggle-text">
-                        <span class="toggle-off">N</span>
-                        <span class="toggle-on">Y</span>
+        {% else %}
+            <div class = "container">
+                <div id = "contactus" class = "head_title wow fadeInUp">
+                    <div class = "col-md-12">
+                        <div class = "row>">
+                            <h3>Get LiT Now!</h3>
+                            <h6>Schedule a free assessment.</h6>
+                            <p>(954)&nbsp;445-0712</p>
+                            <br>
+                        </div>
+                    </div>
+                {% endif %}
+                <div class = "col-md-12 no-padding wow rollIn">
+                    <div class = "main_contactus_area p-t-2 p-x-3">
+                        <form action="{% url 'send_mail' %}"
+                              id="sendmailform"
+                              method="post"
+                              style="border: 1px solid whitesmoke;
+                                     border-radius: 11px;
+                                     padding: 20px">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" name="name" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text"
+                                               id="company"
+                                               class="form-control"
+                                               name="company"
+                                               required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <input type="text" id="title" class="form-control" name="title" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" id="phone" class="form-control" name="phone" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">eMail</label>
+                                        <input type="email" id="email" class="form-control" name="email" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="address">Address</label>
+                                        <input type="text"
+                                               id="address"
+                                               class="form-control"
+                                               name="address"
+                                               required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="zipcode">Zip Code</label>
+                                        <input type="text"
+                                               id="zipcode"
+                                               class="form-control"
+                                               name="zipcode"
+                                               required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" class="form-control" name="city" required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" class="form-control" name="state" required="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="systemofinterest">System of Interest</label>
+                                        <input type="text"
+                                               id="systemofinterest"
+                                               class="form-control"
+                                               name="systemofinterest"
+                                               required="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="styled">Comments</label>
+                                        <textarea rows="9" id="styled" class="form-control" name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="currentcust">Current Customer?</label>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox"
+                                                   id="currentcust"
+                                                   name="currentcust"
+                                                   class="toggle-checkbox">
+                                            <label for="currentcust" class="toggle-label">
+                                                <span class="toggle-inner"></span>
+                                                <span class="toggle-switch-handle"></span>
+                                            </label>
+                                            <div class="toggle-text">
+                                                <span class="toggle-off">N</span>
+                                                <span class="toggle-on">Y</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="m-b-2 m-t-2 col-md-6 form-group">
+                                        <input type="submit"
+                                               value="Send >"
+                                               style="background-color:#e15a1f;
+                                                      margin-left:-17px;
+                                                      width:133px">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-md-10 no-padding col-md-push-1">
+                        <div class = "main_contactus_area wow fadeInLeft">
+                            <div class = "single_contactus">
+                                <div class = "ourmap youtube-center video-responsive">
+                                    {% if contact %}
+                                        <iframe src="{{ contact.google_maps_embed_url }}"
+                                                width="600"
+                                                height="450"
+                                                allowfullscreen></iframe>
+                                    {% else %}
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d764022.0392365947!2d-81.10230656282094!3d26.32140860227949!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1556176806680!5m2!1sen!2sus"
+                                                width="600"
+                                                height="450"
+                                                allowfullscreen></iframe>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="m-b-2 m-t-2 col-md-6 form-group">
-                <input type="submit" value="Send >" style="background-color:#e15a1f; margin-left:-17px; width:133px;">
+        <div class="modal fade"
+             id="emailSuccessModal"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="emailSuccessModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content"
+                     style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                            color: white;
+                            border: none;
+                            border-radius: 15px">
+                    <div class="modal-header"
+                         style="border-bottom: none;
+                                padding: 30px 30px 10px">
+                        <h3 class="modal-title"
+                            id="emailSuccessModalLabel"
+                            style="font-weight: bold">
+                            <i class="fas fa-check-circle"
+                               style="color: #4ade80;
+                                      margin-right: 10px"></i>
+                            Success!
+                        </h3>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                                style="color: white;
+                                       opacity: 1">
+                            <span aria-hidden="true" style="font-size: 2rem;">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding: 20px 30px 30px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                            Your message has been successfully sent! We appreciate your interest.
+                        </p>
+                        <p style="font-size: 0.95rem; opacity: 0.9;">Our team will get back to you shortly.</p>
+                    </div>
+                    <div class="modal-footer"
+                         style="border-top: none;
+                                padding: 10px 30px 30px">
+                        <button type="button"
+                                class="btn btn-light modal-close-btn"
+                                data-dismiss="modal"
+                                style="background: white;
+                                       color: #667eea;
+                                       font-weight: bold;
+                                       padding: 10px 30px;
+                                       border-radius: 25px">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</form>
-
-   </div >
-  </div >
-
-  <div class = "row" >
-   <div class = "col-md-10 no-padding col-md-push-1" >
-    <div class = "main_contactus_area wow fadeInLeft" >
-     <div class = "single_contactus" >
-      <div class = "ourmap youtube-center video-responsive">
-       {% if contact %}
-       <iframe src = "{{ contact.google_maps_embed_url }}" width = "600" height = "450" allowfullscreen ></iframe >
-       {% else %}
-       <iframe src = "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d764022.0392365947!2d-81.10230656282094!3d26.32140860227949!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1556176806680!5m2!1sen!2sus" width = "600" height = "450" allowfullscreen ></iframe >
-       {% endif %}
-      </div >
-     </div >
-    </div >
-   </div >
-  </div >
-
- </div >
-</div >
-
-<script >
+        <!-- Email Error Modal -->
+        <div class="modal fade"
+             id="emailErrorModal"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="emailErrorModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content"
+                     style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+                            color: white;
+                            border: none;
+                            border-radius: 15px">
+                    <div class="modal-header"
+                         style="border-bottom: none;
+                                padding: 30px 30px 10px">
+                        <h3 class="modal-title"
+                            id="emailErrorModalLabel"
+                            style="font-weight: bold">
+                            <i class="fas fa-exclamation-circle"
+                               style="color: #fbbf24;
+                                      margin-right: 10px"></i>
+                            Oops!
+                        </h3>
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-label="Close"
+                                style="color: white;
+                                       opacity: 1">
+                            <span aria-hidden="true" style="font-size: 2rem;">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding: 20px 30px 30px;">
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">There was an error sending your message.</p>
+                        <p style="font-size: 0.95rem; opacity: 0.9;">Please try again or contact us directly at {{ contact.phone }}.</p>
+                    </div>
+                    <div class="modal-footer"
+                         style="border-top: none;
+                                padding: 10px 30px 30px">
+                        <button type="button"
+                                class="btn btn-light modal-close-btn"
+                                data-dismiss="modal"
+                                style="background: white;
+                                       color: #f5576c;
+                                       font-weight: bold;
+                                       padding: 10px 30px;
+                                       border-radius: 25px">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
  document.addEventListener('DOMContentLoaded', function () {
   // Nuclear option: Find and destroy the checkbox visually
   const checkbox = document.getElementById('currentcust');
@@ -191,4 +321,60 @@
    });
   }
  });
-</script >
+        </script>
+        <script>
+// Wait for everything to load
+window.addEventListener('load', function() {
+    console.log("Window loaded, setting up form handler...");
+    
+    var form = document.getElementById('sendmailform');
+    console.log("Form found:", form);
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            console.log("Form intercepted!");
+            
+            var formData = new FormData(form);
+            var csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+            
+            fetch('/send-mail/', {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Response:", data);
+                if (data.status === 'error') {
+                    if (typeof $ !== 'undefined' && $.fn.modal) {
+                        $('#emailErrorModal').modal('show');
+                    } else {
+                        alert('Error: ' + data.message);
+                    }
+                } else {
+                    if (typeof $ !== 'undefined' && $.fn.modal) {
+                        $('#emailSuccessModal').modal('show');
+                    } else {
+                        alert('Success! Your message has been sent.');
+                    }
+                    form.reset();
+                }
+            })
+            .catch(error => {
+                console.log("Fetch error:", error);
+                if (typeof $ !== 'undefined' && $.fn.modal) {
+                    $('#emailErrorModal').modal('show');
+                } else {
+                    alert('Error sending message.');
+                }
+            });
+            
+            return false;
+        }, true);
+    }
+});
+        </script>

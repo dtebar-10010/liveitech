@@ -2,11 +2,12 @@
   <body style="background-color:black; color:white;">
     <h1>Thanks for your eMail!</h1>
     <p>We appreciate your interest.</p>
-    <p><a href="../../home.php">Back to homepage...</a>.</p>
-
+    <p>
+      <a href="{% url 'index' %}">Back to homepage...</a>.
+    </p>
     <script>
       setTimeout(function () {
-        window.location.href = '../../index.php';
+        window.location.href = '{% url 'index' %}';
       },1000);
     </script>
   </body>

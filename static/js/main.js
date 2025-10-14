@@ -1,6 +1,4 @@
 "use strict";
-
-
 jQuery(document).ready(function ($) {
 
     jQuery(window).load(function () {
@@ -25,9 +23,6 @@ jQuery(document).ready(function ($) {
             }
         }
     });
-
-
-
     /*---------------------------------------------*
      * STICKY scroll
      ---------------------------------------------*/
@@ -39,7 +34,7 @@ jQuery(document).ready(function ($) {
 //    $('.button-collapse').sideNav({
 //        menuWidth: 250, // Default is 240
 //        edge: 'right', // Choose the horizontal origin
-//        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+//        closeOnClick: true // Closes side-nav on &lt;a&gt; clicks, useful for Angular/Meteor
 //    }
 //    );
 
@@ -53,8 +48,7 @@ jQuery(document).ready(function ($) {
         alignment: 'right'
     });
 
-
-// carousel Testimonial slider    
+    // carousel Testimonial slider    
     //   $('.carousel').carousel();
 
     /*---------------------------------------------*
@@ -84,13 +78,12 @@ jQuery(document).ready(function ($) {
         dots: false,
         nav: false,
         navText: [
-            "<i class='lnr lnr-chevron-left'></i>",
-            "<i class='lnr lnr-chevron-right'></i>"
+            '<i class="lnr lnr-chevron-left"></i>',
+            '<i class="lnr lnr-chevron-right"></i>'
         ],
         autoplayHoverPause: true
 
     });
-
 
 // scroll Up
 
@@ -106,7 +99,6 @@ jQuery(document).ready(function ($) {
         return false;
     });
 
-
     jQuery('.gallery-img').magnificPopup({
         type: 'image',
         gallery: {
@@ -117,7 +109,6 @@ jQuery(document).ready(function ($) {
 //    jQuery('.gallery-video').magnificPopup({
 //        type: 'iframe',
 //    });
-
 
     /*---------------------------------------------*
      * Menu Section
@@ -164,22 +155,15 @@ jQuery(document).ready(function ($) {
     
     
 // scrolldown icon
-$('.scrolldown a').bind('click', function () {
+$('.scrolldown a').bind('click', function (event) {
     $('html , body').stop().animate({
         scrollTop: $($(this).attr('href')).offset().top - 160
     }, 1500, 'easeInOutExpo');
     event.preventDefault();
 });
-
-
-
-
-
+    
     //End
 });
-
-
-
 
 jQuery(document).on("scroll", function () {
     if ($(document).scrollTop() > 120) {
@@ -194,4 +178,27 @@ jQuery(document).on('click', '.navbar-collapse.in', function (e) {
         $(this).collapse('hide');
     }
 });
+
+// Find the form submission code and update it
+// Look for: url: "php-pages/includes/send_mail.php"
+// Replace with: url: "/send-mail/"
+
+$("#contactform").on("submit", function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "/send-mail/",
+			data: $(this).serialize(),
+			success: function(response) {
+				// Handle the response from the server
+				console.log(response);
+				// You can show a success message or perform any other actions here
+			},
+			error: function(xhr, status, error) {
+				// Handle any errors that occur during the request
+				console.error(error);
+				// You can show an error message or perform any other actions here
+			}
+		});
+	});
 
